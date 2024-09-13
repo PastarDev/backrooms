@@ -30,9 +30,7 @@ public class PlayerLook : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-       
         transform.Rotate(Vector3.up * mouseX);
-
        
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f); 
@@ -62,7 +60,6 @@ public class PlayerLook : MonoBehaviour
             {
                transform.localScale = new Vector3(transform.localScale.x, playerHeight, transform.localScale.z);
             }
-
     }
 
     void FixedUpdate()
